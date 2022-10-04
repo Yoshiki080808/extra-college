@@ -27,7 +27,7 @@
     <div class="border-t border-gray-200">
       <dl>
         
-        <input type="text" name="company_id" value="{{ \Auth::user()->id }}" id="company_id" autocomplete="company_id" class="hidden mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm  border" placeholder="KANEKO コンサルティング">
+        <input type="text" name="company_id" value="{{ \Auth::user()->id }}" id="company_id" autocomplete="company_id" class="hidden mt-1 w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm  border" placeholder="KANEKO コンサルティング">
         
         <div class="bg-gray-50 px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
           <dt class="text-sm font-medium text-gray-500">
