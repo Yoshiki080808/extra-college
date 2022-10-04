@@ -83,7 +83,7 @@ class InternshipController extends Controller
             'attachment_1'=> $request->attachment_1,
             'attachment_2'=> $request->attachment_2,
         ]); // データを新規作成
-        $internship->companies->attach($request->companies);
+        // $internship->companies->attach($request->companies);
         return redirect()->route('index.internship');
 
     }
