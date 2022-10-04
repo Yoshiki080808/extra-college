@@ -11,7 +11,7 @@
 </div>
 <div class="mt-5 sm:mt-8 sm:flex sm:justify-center text-center">
   <div class="rounded-md shadow">
-    <a href="{{ route('select.interns') }}" class="flex w-full items-center justify-center rounded-md border border-transparent bg-indigo-600 px-8 py-3 text-base font-medium text-white hover:bg-indigo-700 md:py-4 md:px-10 md:text-lg">始める（学生用）</a>
+    <a href="{{ route('select.interns') }}" class="flex w-full items-center justify-center rounded-md border border-transparent bg-indigo-600 px-8 py-3 text-base font-medium text-white hover:bg-indigo-700 md:py-4 md:px-10 md:text-lg">始める（インターンシップページへ）</a>
   </div>
   <div class="mt-3 sm:mt-0 sm:ml-3">
     <a href="{{ route('company.login.form') }}" class="flex w-full items-center justify-center rounded-md border border-transparent bg-indigo-100 px-8 py-3 text-base font-medium text-indigo-700 hover:bg-indigo-200 md:py-4 md:px-10 md:text-lg">ログイン（企業用）</a>

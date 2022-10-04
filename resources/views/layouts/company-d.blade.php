@@ -76,7 +76,7 @@
   
                 <a href="{{ route('index.internship') }}" class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">インターンシップ作成</a>
   
-                <a href="profile" class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">企業情報設定</a>
+                {{-- <a href="profile" class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">企業情報設定</a> --}}
   
                 <a href="login" class="text-gray-300 bg-indigo-700 hover:bg-indigo-500 hover:text-white px-3 py-2 rounded-md text-sm font-medium">ログアウト</a>
                 <p class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">{{ \Auth::user()->pic_name }}様、こんにちは！</p>
@@ -156,7 +156,7 @@
   
           <a href="{{ route('index.internship') }}" class="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">インターンシップ作成</a>
   
-          <a href="profile" class="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">企業情報設定</a>
+          {{-- <a href="profile" class="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">企業情報設定</a> --}}
   
           <a href="login" class="text-gray-300 bg-indigo-700 hover:bg-indigo-500 hover:text-white block px-3 py-2 rounded-md text-base font-medium">ログアウト</a>
         </div>
@@ -166,8 +166,8 @@
               <img class="h-10 w-10 rounded-full" src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80" alt="">
             </div>
             <div class="ml-3">
-              <div class="text-base font-medium leading-none text-white">金子佳樹</div>
-              <div class="text-sm font-medium leading-none text-gray-400">kaneko@example.com</div>
+              <div class="text-base font-medium leading-none text-white">{{ \Auth::user()->pic_name }}</div>
+              <div class="text-sm font-medium leading-none text-gray-400">{{ \Auth::user()->email }}</div>
             </div>
             <button type="button" class="ml-auto flex-shrink-0 rounded-full bg-gray-800 p-1 text-gray-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800">
               <span class="sr-only">View notifications</span>
