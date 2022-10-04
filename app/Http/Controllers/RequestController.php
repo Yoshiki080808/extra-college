@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Company;
+use App\Models\Matching;
 use App\Models\Student;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
@@ -43,7 +44,10 @@ class RequestController extends Controller
             'degree'=> "required",
             'university'=> "required",
             'department'=> "required",
-            'faculty'=> "nullable"
+            'faculty'=> "nullable",
+            'student_id' => "nullable",
+            'company_id' => "nullable",
+            'internship_id' => "nullable",
         ]);
 
         $student = Student::create([
@@ -62,6 +66,19 @@ class RequestController extends Controller
             'department'=> $request->department,
             'faculty'=> $request->faculty,
         ]); // データを新規作成
+
+        // $matching = Matching::create(   
+        // [
+        //     'student_id' => '3',
+        //     'company_id' => '1',
+        //     'internship_id' => '1',
+        //     'is_matching' => '0',
+        //     'is_orientation' => '0',
+        //     'is_internship' => '0',
+        //     'is_done' => '0'
+        // ]);    
+
+
         return redirect()->route('select.interns')->with('success', '登録が完了しました');
     }
 

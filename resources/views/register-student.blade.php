@@ -81,7 +81,7 @@
 
                 <div class="col-span-6 sm:col-span-4">
                   <label for="email-address" class="block text-sm font-medium text-gray-700">写真</label>
-                  <input type="text" name="image" value="{{ old('image') }}" id="email-address" autocomplete="email" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm  border">
+                  <input type="text" name="image" value="https://cdn.pixabay.com/photo/2016/11/14/17/39/person-1824144_1280.png" id="email-address" autocomplete="email" class="hidden mt-1 w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm  border">
                 </div>
   
                 <div class="col-span-6 sm:col-span-3">

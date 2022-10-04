@@ -27,22 +27,22 @@
 
         {{-- 繰り返し処理で企業が個別で作ったインターンシップを表示 --}}
         @foreach($internships as $internship)
-        <a href="create-interns" class="group">
+        <a href="{{ route('show.interns', ['id' => $internship->company_id]) }}" class="group">
           <div class="aspect-w-1 aspect-h-1 w-full overflow-hidden rounded-lg bg-gray-200 xl:aspect-w-7 xl:aspect-h-8">
-            <img src="https://cdn.pixabay.com/photo/2021/03/03/16/28/search-engine-optimization-6065663_1280.jpg" alt="Tall slender porcelain bottle with natural clay textured body and cork stopper." class="h-full w-full object-cover object-center group-hover:opacity-75">
+            <img src="{{ $internship->image }}" alt="Tall slender porcelain bottle with natural clay textured body and cork stopper." class="h-full w-full object-cover object-center group-hover:opacity-75">
           </div>
           <h3 class="mt-4 text-sm text-gray-700">{{ $internship->title }}</h3>
-          <p class="mt-1 text-lg font-medium text-gray-900">$</p>
+          <p class="mt-1 text-lg font-medium text-gray-900">{{ $internship->company_name }}</p>
         </a>
         @endforeach
 
-        <a href="curriculum" class="group">
+        {{-- <a href="curriculum" class="group">
           <div class="aspect-w-1 aspect-h-1 w-full overflow-hidden rounded-lg bg-gray-200 xl:aspect-w-7 xl:aspect-h-8">
             <img src="https://tailwindui.com/img/ecommerce-images/category-page-04-image-card-01.jpg" alt="Tall slender porcelain bottle with natural clay textured body and cork stopper." class="h-full w-full object-cover object-center group-hover:opacity-75">
           </div>
           <h3 class="mt-4 text-sm text-gray-700">Earthen Bottle</h3>
           <p class="mt-1 text-lg font-medium text-gray-900">$48</p>
-        </a>
+        </a> --}}
   
         <!-- More products... -->
       </div>

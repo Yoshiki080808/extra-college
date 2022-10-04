@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Company;
 use App\Models\Internship;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -82,7 +83,9 @@ class InternshipController extends Controller
             'attachment_1'=> $request->attachment_1,
             'attachment_2'=> $request->attachment_2,
         ]); // データを新規作成
+        $internship->companies->attach($request->companies);
         return redirect()->route('index.internship');
+
     }
 
     /**
@@ -91,9 +94,18 @@ class InternshipController extends Controller
      * @param  \App\Models\Internship  $internship
      * @return \Illuminate\Http\Response
      */
-    public function show(Internship $internship)
+    public function show($id)
     {
-        //
+        $internship = Internship::find($id);
+        $company = Company::where('id', '=', $internship->company_id)->get();
+        return view('personal.curriculum', compact('internship','company'));
+    }
+
+    public function showCompany($id)
+    {
+        $internship = Internship::find($id);
+        // $company = Company::where('id', '=', $internship->company_id)->get();
+        return view('company/show-interns', compact('internship'));
     }
 
     /**

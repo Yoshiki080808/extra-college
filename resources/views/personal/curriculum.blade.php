@@ -4,38 +4,38 @@
 <!-- This example requires Tailwind CSS v2.0+ -->
 <div class="overflow-hidden bg-white shadow sm:rounded-lg">
     <div class="px-4 py-5 sm:px-6">
-      <h3 class="sm:text-lg lg:text-3xl font-medium leading-6 text-gray-900">マーケティングコンサル/法人営業</h3>
+      <h3 class="sm:text-lg lg:text-3xl font-medium leading-6 text-gray-900">{{ $internship->title }}</h3>
       <p class="mt-1 max-w-2xl text-sm text-gray-500">インターンシップ詳細と添付資料</p>
     </div>
     <div class="border-t border-gray-200">
       <dl>
         <div class="bg-gray-50 px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
           <dt class="text-sm font-medium text-gray-500">企業名</dt>
-          <dd class="mt-1 text-sm text-gray-900 sm:col-span-2 sm:mt-0">KANEKO コンサルティング</dd>
+          <dd class="mt-1 text-sm text-gray-900 sm:col-span-2 sm:mt-0">{{ $internship->company_name }}</dd>
         </div>
         <div class="bg-white px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
           <dt class="text-sm font-medium text-gray-500">担当者名</dt>
-          <dd class="mt-1 text-sm text-gray-900 sm:col-span-2 sm:mt-0">金子佳樹</dd>
+          <dd class="mt-1 text-sm text-gray-900 sm:col-span-2 sm:mt-0">{{ $internship->pic_name }}</dd>
         </div>
         <div class="bg-gray-50 px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
           <dt class="text-sm font-medium text-gray-500">連絡用メールアドレス</dt>
-          <dd class="mt-1 text-sm text-gray-900 sm:col-span-2 sm:mt-0">kaneko@example.com</dd>
+          <dd class="mt-1 text-sm text-gray-900 sm:col-span-2 sm:mt-0">{{ $internship->pic_email }}</dd>
         </div>
         <div class="bg-white px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
           <dt class="text-sm font-medium text-gray-500">ポジション名</dt>
-          <dd class="mt-1 text-sm text-gray-900 sm:col-span-2 sm:mt-0">法人営業</dd>
+          <dd class="mt-1 text-sm text-gray-900 sm:col-span-2 sm:mt-0">{{ $internship->position_name }}</dd>
         </div>
         <div class="bg-white px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
           <dt class="text-sm font-medium text-gray-500">期間</dt>
-          <dd class="mt-1 text-sm text-gray-900 sm:col-span-2 sm:mt-0">2023年2月からの3ヶ月間</dd>
+          <dd class="mt-1 text-sm text-gray-900 sm:col-span-2 sm:mt-0">{{ $internship->duration }}</dd>
         </div>
         <div class="bg-white px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
           <dt class="text-sm font-medium text-gray-500">給与形態</dt>
-          <dd class="mt-1 text-sm text-gray-900 sm:col-span-2 sm:mt-0">1,200円/時間</dd>
+          <dd class="mt-1 text-sm text-gray-900 sm:col-span-2 sm:mt-0">{{ $internship->salary_type }}</dd>
         </div>
         <div class="bg-gray-50 px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
           <dt class="text-sm font-medium text-gray-500">内容</dt>
-          <dd class="mt-1 text-sm text-gray-900 sm:col-span-2 sm:mt-0">マーケティングコンサルティング会社の一員として、新規法人顧客獲得のための法人営業をして頂きます。マーケティングの基礎知識の学習と会社方針に合わせたプレゼン資料の作成、プレゼン等をメインの業務として経験して頂き予定ですので、実際の現場で営業を経験したいと思う学生は是非ご応募ください。</dd>
+          <dd class="mt-1 text-sm text-gray-900 sm:col-span-2 sm:mt-0">{{ $internship->content }}</dd>
         </div>
         <div class="bg-white px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
           <dt class="text-sm font-medium text-gray-500">添付資料（インターン概要と契約書）</dt>

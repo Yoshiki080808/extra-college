@@ -5,7 +5,7 @@
 
     <div class="container mx-auto px-6 py-8">
       <div>
-          <h3 class="text-3xl font-medium text-gray-700">申し込み生徒状況</h3>
+          <h3 class="text-3xl font-medium text-gray-700">申し込み生徒一覧</h3>
           <div class="mt-4">
             <div class="flex flex-wrap -mx-6">
               <div class="w-full px-6 sm:w-1/2 xl:w-1/4">
@@ -21,7 +21,7 @@
                     </svg>
                   </div>
                   <div class="mx-5">
-                    <h4 class="text-2xl font-semibold text-gray-700">360</h4>
+                    <h4 class="text-2xl font-semibold text-gray-700">4</h4>
                     <div class="text-gray-500">申込み生徒総数</div>
                   </div>
                 </div>
@@ -36,7 +36,7 @@
                     </svg>
                   </div>
                   <div class="mx-5">
-                    <h4 class="text-2xl font-semibold text-gray-700">62</h4>
+                    <h4 class="text-2xl font-semibold text-gray-700">1</h4>
                     <div class="text-gray-500">承認数</div>
                   </div>
                 </div>
@@ -51,7 +51,7 @@
                     </svg>
                   </div>
                   <div class="mx-5">
-                    <h4 class="text-2xl font-semibold text-gray-700">15</h4>
+                    <h4 class="text-2xl font-semibold text-gray-700">0</h4>
                     <div class="text-gray-500">アクティブ数</div>
                   </div>
                 </div>
@@ -70,7 +70,7 @@
                     </svg>
                   </div>
                   <div class="mx-5">
-                    <h4 class="text-2xl font-semibold text-gray-700">29</h4>
+                    <h4 class="text-2xl font-semibold text-gray-700">0</h4>
                     <div class="text-gray-500">修了生徒数</div>
                   </div>
                 </div>
@@ -86,111 +86,50 @@
                   <thead>
                   <tr>
                     <th class="px-6 py-3 text-xs font-medium leading-4 tracking-wider text-left text-gray-500 uppercase border-b border-gray-200 bg-gray-50"> 生徒名 </th>
-                    <th class="px-6 py-3 text-xs font-medium leading-4 tracking-wider text-left text-gray-500 uppercase border-b border-gray-200 bg-gray-50"> インターンシップ名/ポジション </th>
+                    <th class="px-6 py-3 text-xs font-medium leading-4 tracking-wider text-left text-gray-500 uppercase border-b border-gray-200 bg-gray-50"> 大学名/学位 </th>
                     <th class="px-6 py-3 text-xs font-medium leading-4 tracking-wider text-left text-gray-500 uppercase border-b border-gray-200 bg-gray-50"> 承認 </th>
                     <th class="px-6 py-3 text-xs font-medium leading-4 tracking-wider text-left text-gray-500 uppercase border-b border-gray-200 bg-gray-50"> 研修中 </th>
                     <th class="px-6 py-3 text-xs font-medium leading-4 tracking-wider text-left text-gray-500 uppercase border-b border-gray-200 bg-gray-50"> インターン中 </th>
                     <th class="px-6 py-3 text-xs font-medium leading-4 tracking-wider text-left text-gray-500 uppercase border-b border-gray-200 bg-gray-50"> 終了済み</th>
-                    <th class="px-6 py-3 border-b border-gray-200 bg-gray-50">詳細</th>
+                    {{-- <th class="px-6 py-3 border-b border-gray-200 bg-gray-50">詳細</th> --}}
                   </tr>
                   </thead>
                   <tbody class="bg-white">
+                    @foreach($students as $student)
                     <tr>
-                        <td class="px-6 py-4 border-b border-gray-200 whitespace-nowrap">
-                        <div class="flex items-center">
-                            <div class="flex-shrink-0 w-10 h-10">
-                            <img class="w-10 h-10 rounded-full" src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=facearea&amp;facepad=2&amp;w=256&amp;h=256&amp;q=80" alt="">
-                            </div>
-                            <div class="ml-4">
-                            <div class="text-sm font-medium leading-5 text-gray-900">最上太郎</div>
-                            <div class="text-sm leading-5 text-gray-500">mogami@example.com</div>
-                            </div>
-                        </div>
-                        </td>
-                        <td class="px-6 py-4 border-b border-gray-200 whitespace-nowrap">
-                          <div class="text-sm leading-5 text-gray-900">Software Engineer</div>
-                          <div class="text-sm leading-5 text-gray-500">Web dev</div>
-                        </td>
-                        <td class="px-6 py-4 border-b border-gray-200 whitespace-nowrap">
-                          <span class="inline-flex px-2 text-xs font-semibold leading-5 text-green-800 bg-green-100 rounded-full">Active</span>
-                        </td>
-                        <td class="px-6 py-4 border-b border-gray-200 whitespace-nowrap">
-                          <span class="inline-flex px-2 text-xs font-semibold leading-5 text-green-800 bg-green-100 rounded-full">Active</span>
-                        </td>
-                        <td class="px-6 py-4 border-b border-gray-200 whitespace-nowrap">
-                          <span class="inline-flex px-2 text-xs font-semibold leading-5 text-green-800 bg-green-100 rounded-full">Active</span>
-                        </td>
-                        <td class="px-6 py-4 border-b border-gray-200 whitespace-nowrap">
-                          <span class="inline-flex px-2 text-xs font-semibold leading-5 text-green-800 bg-green-100 rounded-full">Active</span>
-                        </td>
-                        <td class="px-6 py-4 text-sm font-medium leading-5 text-right border-b border-gray-200 whitespace-nowrap">
-                          <a href="student-profile" class="text-indigo-600 hover:text-indigo-900">生徒情報</a>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td class="px-6 py-4 border-b border-gray-200 whitespace-nowrap">
-                        <div class="flex items-center">
-                            <div class="flex-shrink-0 w-10 h-10">
-                            <img class="w-10 h-10 rounded-full" src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=facearea&amp;facepad=2&amp;w=256&amp;h=256&amp;q=80" alt="">
-                            </div>
-                            <div class="ml-4">
-                            <div class="text-sm font-medium leading-5 text-gray-900">最上太郎</div>
-                            <div class="text-sm leading-5 text-gray-500">mogami@example.com</div>
-                            </div>
-                        </div>
-                        </td>
-                        <td class="px-6 py-4 border-b border-gray-200 whitespace-nowrap">
-                          <div class="text-sm leading-5 text-gray-900">Software Engineer</div>
-                          <div class="text-sm leading-5 text-gray-500">Web dev</div>
-                        </td>
-                        <td class="px-6 py-4 border-b border-gray-200 whitespace-nowrap">
-                          <span class="inline-flex px-2 text-xs font-semibold leading-5 text-green-800 bg-green-100 rounded-full">Active</span>
-                        </td>
-                        <td class="px-6 py-4 border-b border-gray-200 whitespace-nowrap">
-                          <span class="inline-flex px-2 text-xs font-semibold leading-5 text-green-800 bg-green-100 rounded-full">Active</span>
-                        </td>
-                        <td class="px-6 py-4 border-b border-gray-200 whitespace-nowrap">
-                          <span class="inline-flex px-2 text-xs font-semibold leading-5 text-green-800 bg-green-100 rounded-full">Active</span>
-                        </td>
-                        <td class="px-6 py-4 border-b border-gray-200 whitespace-nowrap">
-                          <span class="inline-flex px-2 text-xs font-semibold leading-5 text-green-800 bg-green-100 rounded-full">Active</span>
-                        </td>
-                        <td class="px-6 py-4 text-sm font-medium leading-5 text-right border-b border-gray-200 whitespace-nowrap">
-                          <a href="#" class="text-indigo-600 hover:text-indigo-900">生徒情報</a>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td class="px-6 py-4 border-b border-gray-200 whitespace-nowrap">
-                        <div class="flex items-center">
-                            <div class="flex-shrink-0 w-10 h-10">
-                            <img class="w-10 h-10 rounded-full" src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=facearea&amp;facepad=2&amp;w=256&amp;h=256&amp;q=80" alt="">
-                            </div>
-                            <div class="ml-4">
-                            <div class="text-sm font-medium leading-5 text-gray-900">最上太郎</div>
-                            <div class="text-sm leading-5 text-gray-500">mogami@example.com</div>
-                            </div>
-                        </div>
-                        </td>
-                        <td class="px-6 py-4 border-b border-gray-200 whitespace-nowrap">
-                          <div class="text-sm leading-5 text-gray-900">Software Engineer</div>
-                          <div class="text-sm leading-5 text-gray-500">Web dev</div>
-                        </td>
-                        <td class="px-6 py-4 border-b border-gray-200 whitespace-nowrap">
-                          <span class="inline-flex px-2 text-xs font-semibold leading-5 text-green-800 bg-green-100 rounded-full">Active</span>
-                        </td>
-                        <td class="px-6 py-4 border-b border-gray-200 whitespace-nowrap">
-                          <span class="inline-flex px-2 text-xs font-semibold leading-5 text-green-800 bg-green-100 rounded-full">Active</span>
-                        </td>
-                        <td class="px-6 py-4 border-b border-gray-200 whitespace-nowrap">
-                          <span class="inline-flex px-2 text-xs font-semibold leading-5 text-green-800 bg-green-100 rounded-full">Active</span>
-                        </td>
-                        <td class="px-6 py-4 border-b border-gray-200 whitespace-nowrap">
-                          <span class="inline-flex px-2 text-xs font-semibold leading-5 text-green-800 bg-green-100 rounded-full">Active</span>
-                        </td>
-                        <td class="px-6 py-4 text-sm font-medium leading-5 text-right border-b border-gray-200 whitespace-nowrap">
-                          <a href="#" class="text-indigo-600 hover:text-indigo-900">生徒情報</a>
-                        </td>
-                      </tr>
+                      <td class="px-6 py-4 border-b border-gray-200 whitespace-nowrap">
+                      <div class="flex items-center">
+                          <div class="flex-shrink-0 w-10 h-10">
+                          <img class="w-10 h-10 rounded-full" src="https://cdn.pixabay.com/photo/2016/11/14/17/39/person-1824144_1280.png" alt="">
+                          </div>
+                          <div class="ml-4">
+                          <div class="text-sm font-medium leading-5 text-gray-900">{{ $student->name }}</div>
+                          <div class="text-sm leading-5 text-gray-500">{{ $student->email }}</div>
+                          </div>
+                      </div>
+                      </td>
+                      <td class="px-6 py-4 border-b border-gray-200 whitespace-nowrap">
+                        <div class="text-sm leading-5 text-gray-900">{{ $student->university }}</div>
+                        <div class="text-sm leading-5 text-gray-500">{{ $student->degree }}</div>
+                      </td>
+                      <td class="px-6 py-4 border-b border-gray-200 whitespace-nowrap">
+                        <span class="inline-flex px-2 text-xs font-semibold leading-5 text-green-800 bg-green-100 rounded-full">Active</span>
+                      </td>
+                      <td class="px-6 py-4 border-b border-gray-200 whitespace-nowrap">
+                        <span class="inline-flex px-2 text-xs font-semibold leading-5 text-red-400 bg-green-100 rounded-full">not Active</span>
+                      </td>
+                      <td class="px-6 py-4 border-b border-gray-200 whitespace-nowrap">
+                        <span class="inline-flex px-2 text-xs font-semibold leading-5 text-red-400 bg-green-100 rounded-full">not Active</span>
+                      </td>
+                      <td class="px-6 py-4 border-b border-gray-200 whitespace-nowrap">
+                        <span class="inline-flex px-2 text-xs font-semibold leading-5 text-red-400 bg-green-100 rounded-full">not Active</span>
+                      </td>
+                      {{-- <td class="px-6 py-4 text-sm font-medium leading-5 text-right border-b border-gray-200 whitespace-nowrap">
+                        <a href="student-profile" class="text-indigo-600 hover:text-indigo-900">生徒情報</a>
+                      </td> --}}
+                    </tr>
+                    @endforeach
+
                   </tbody>
                 </table>
               </div>

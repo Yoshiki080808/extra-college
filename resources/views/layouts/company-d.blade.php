@@ -67,7 +67,7 @@
         <div class="flex h-16 items-center justify-between">
           <div class="flex items-center">
             <div class="flex-shrink-0">
-              <img class="h-8 w-8" src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=500" alt="Your Company">
+              <img class="h-8 w-8" src="https://cdn.pixabay.com/photo/2014/04/02/10/16/fire-303309_1280.png" alt="Your Company">
             </div>
             <div class="hidden md:block">
               <div class="ml-10 flex items-baseline space-x-4">
@@ -77,8 +77,10 @@
                 <a href="{{ route('index.internship') }}" class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">インターンシップ作成</a>
   
                 {{-- <a href="profile" class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">企業情報設定</a> --}}
-  
-                <a href="login" class="text-gray-300 bg-indigo-700 hover:bg-indigo-500 hover:text-white px-3 py-2 rounded-md text-sm font-medium">ログアウト</a>
+                <form action="{{ route('company.logout') }}" method="POST">
+                  @csrf
+                  <button type="submit" class="text-gray-300 bg-indigo-700 hover:bg-indigo-500 hover:text-white px-3 py-2 rounded-md text-sm font-medium">ログアウト</button>
+                </form>
                 <p class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">{{ \Auth::user()->pic_name }}様、こんにちは！</p>
               </div>
             </div>
@@ -98,7 +100,7 @@
                 <div>
                   <button type="button" class="flex max-w-xs items-center rounded-full bg-gray-800 text-sm focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800" id="user-menu-button" aria-expanded="false" aria-haspopup="true">
                     <span class="sr-only">Open user menu</span>
-                    <img class="h-8 w-8 rounded-full" src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80" alt="">
+                    <img class="h-8 w-8 rounded-full" src="https://cdn.pixabay.com/photo/2016/11/14/17/39/person-1824147_1280.png" alt="">
                   </button>
                 </div>
   
@@ -163,7 +165,7 @@
         <div class="border-t border-gray-700 pt-4 pb-3">
           <div class="flex items-center px-5">
             <div class="flex-shrink-0">
-              <img class="h-10 w-10 rounded-full" src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80" alt="">
+              <img class="h-10 w-10 rounded-full" src="https://cdn.pixabay.com/photo/2016/11/14/17/39/person-1824147_1280.png" alt="">
             </div>
             <div class="ml-3">
               <div class="text-base font-medium leading-none text-white">{{ \Auth::user()->pic_name }}</div>

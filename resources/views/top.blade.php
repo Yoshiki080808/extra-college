@@ -7,7 +7,7 @@
         <span class="block xl:inline">Expand Your Vision</span>
         <span class="block text-indigo-600 xl:inline">新たな可能性を掴もう</span>
     </h1>
-    <p class="mt-3 text-gray-500 sm:mx-auto sm:mt-5 sm:max-w-xl sm:text-lg">Extra Collegeは、オンライン完結型の長期インターンシップを全ての大学生に提供し、人生に新たな可能性と選択肢を届けるためのAIマッチングプラットフォームです。</p>
+    <p class="mt-3 text-gray-500 sm:mx-auto sm:mt-5 sm:max-w-xl sm:text-lg">Extra Courageは、オンライン完結型の長期インターンシップを全ての大学生に提供し、人生に新たな可能性と選択肢を届けるためのAIマッチングプラットフォームです。</p>
 </div>
 <div class="mt-5 sm:mt-8 sm:flex sm:justify-center text-center">
   <div class="rounded-md shadow">

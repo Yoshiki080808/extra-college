@@ -3,6 +3,7 @@
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\InternshipController;
 use App\Http\Controllers\RequestController;
+use App\Http\Controllers\StudentController;
 use App\Models\Student;
 use GuzzleHttp\Psr7\Request;
 use Illuminate\Support\Facades\Route;
@@ -56,7 +57,7 @@ Route::post('/store/company', [RequestController::class, 'storeCompany'])->name(
 // 生徒用ステータス画面（マッチング待ちや承認後の状態管理）
 Route::get('/personal/status', fn() => view('personal.status'));
 // 個別のインターンシップ内容表示画面
-Route::get('/personal/curriculum', fn() => view('personal.curriculum'));
+Route::get('/personal/curriculum/{id}', [InternshipController::class, 'show'])->name('show.interns');
 // インターンシップ全部閲覧画面
 Route::get('/personal/match-interns', [InternshipController::class, 'indexAll'])->name('select.interns');
 // 生徒のプロフィール画面（編集等）
@@ -65,16 +66,19 @@ Route::get('/personal/profile', fn() => view('personal.profile'));
 
 //企業用ダッシュボード
 // 企業用ステータス画面（マッチング待ちや承認後の状態管理）
-Route::get('/company/status', fn() => view('company.status'));
+Route::get('/company/status', [StudentController::class, 'index'])->name('company.status');
 // 企業から見た個別生徒情報表示画面
 Route::get('/company/student-profile', fn() => view('company.student-profile'));
 // 企業毎のインターン表示画面（複数になっていく）
 Route::get('/company/interns', [InternshipController::class, 'index'])->name('index.internship');
+Route::get('/company/interns/{id}', [InternshipController::class, 'showCompany'])->name('show.company.interns');
 // 企業の新規インターン作成画面（編集等）
 Route::get('/company/create-interns', [InternshipController::class, 'create'])->name('create.internship');
 Route::post('/store/interns', [InternshipController::class, 'store'])->name('store.internship');
 // 企業用プロフィール画面（編集等）
 Route::get('/company/profile', fn() => view('company.profile'));
+// ログアウト処理
+Route::post('/company/logout', [AuthController::class, 'logout'])->name('company.logout');
 
 //企業用ダッシュボード
 Route::get('/institution/show-email', fn() => view('institution.show-email'));

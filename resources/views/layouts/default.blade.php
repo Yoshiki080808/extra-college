@@ -56,7 +56,10 @@
       {{-- ナビゲーションバー --}}
   <header class="py-6">
     <div class="container mx-auto flex justify-between items-center px-8 md:px-14 lg:px-24 w-full">
-      <div class="text-xl font-bold">Extra Courage</div>
+      <div class="flex-shrink-0 flex">
+        <img class="h-8 w-8" src="https://cdn.pixabay.com/photo/2014/04/02/10/16/fire-303309_1280.png" alt="Your Company">
+        <div class="ml-6 text-3xl font-bold">Extra Courage</div>
+      </div>
       <div class="space-x-6 hidden xl:flex items-center">
         <a href="/" class="hover:text-selected-text transition-all duration-300">トップ</a>
         <a href="#students" class="hover:text-selected-text transition-all duration-300">大学生へ</a>

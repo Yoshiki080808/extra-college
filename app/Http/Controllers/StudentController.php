@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Student;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class StudentController extends Controller
 {
@@ -14,7 +15,11 @@ class StudentController extends Controller
      */
     public function index()
     {
-        //
+        // ログインしているユーザーidを取得
+        $id = Auth::id();
+        //全てのインターンシップを呼び出し
+        $students = Student::all();
+        return view('company.status', compact('students'));
     }
 
     /**
